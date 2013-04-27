@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  remote_id: 1
+  name: MyString
+  phone: MyString
+  address: MyString
+  lat: 1
+  long: 1
+  rating: 1.5
+  here_now: 1
+  tip: MyText
+  short_url: MyString
+  status: MyString
+
+two:
+  remote_id: 1
+  name: MyString
+  phone: MyString
+  address: MyString
+  lat: 1
+  long: 1
+  rating: 1.5
+  here_now: 1
+  tip: MyText
+  short_url: MyString
+  status: MyString
