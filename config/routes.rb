@@ -1,6 +1,6 @@
 Webofcards::Application.routes.draw do
   
-  get "/:name" => "cards#show"
+  get "/card/:name" => "cards#show"
 
   resources :cards
   
