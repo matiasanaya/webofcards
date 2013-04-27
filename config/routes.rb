@@ -1,5 +1,10 @@
 Webofcards::Application.routes.draw do
-  resources :properties
+  
+  get "/:name" => "cards#show"
+
+  resources :cards
+  
+  resources :props
 
 
   # The priority is based upon order of creation:

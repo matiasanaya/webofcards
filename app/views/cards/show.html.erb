@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Card:</b>
+  <%= @card.name %>
+</p>
+<% @card.props.each do |prop| %>
+	<p>
+	  <b><%= prop.k %>:</b>
+	  <%= prop.v %>
+	</p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427194839) do
+ActiveRecord::Schema.define(:version => 20130427211031) do
+
+  create_table "cards", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "foursquares", :force => true do |t|
     t.integer  "remote_id"
@@ -29,11 +35,12 @@ ActiveRecord::Schema.define(:version => 20130427194839) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "properties", :force => true do |t|
-    t.string   "key"
-    t.string   "value"
+  create_table "props", :force => true do |t|
+    t.string   "k"
+    t.string   "v"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "card_id"
   end
 
 end
