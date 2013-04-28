@@ -1,9 +1,13 @@
 Webofcards::Application.routes.draw do
-  
-  get "/card/:name" => "cards#show"
 
-  resources :cards
+  get 'c/:name' => 'cards#show'
+  post '/cards/:id' => 'cards#show'
+  get '/cards/:id/share' => 'cards#render_share'
+  post '/cards/:id/share' => 'cards#share'
   
+  root :to => 'cards#index'
+  
+  resources :cards
   resources :props
 
 

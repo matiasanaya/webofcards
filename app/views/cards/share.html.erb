@@ -1,0 +1,9 @@
+<h1>Share Card</h1>
+
+<%= form_tag "/cards/#{@card.id}/share" do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+  </div>
+  <div class="actions"><%= submit_tag "Share Card" %></div>
+<% end %>

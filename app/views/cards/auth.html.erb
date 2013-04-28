@@ -1,0 +1,12 @@
+<h1>Enter your email to get access</h1>
+
+<%= form_tag card_path(@card) do %>
+  <div class="field">
+    <%= hidden_field_tag :code, params[:code] %>
+  </div>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+  </div>
+  <div class="actions"><%= submit_tag "Get Access" %></div>
+<% end %>

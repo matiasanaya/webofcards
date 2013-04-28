@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  card_id: 1
+  code: MyString
+  password_digest: MyString
+
+two:
+  card_id: 1
+  code: MyString
+  password_digest: MyString
