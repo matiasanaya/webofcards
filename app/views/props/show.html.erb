@@ -1,15 +1,24 @@
+<% prop = @property %>
+
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Key:</b>
-  <%= @property.key %>
-</p>
-
-<p>
-  <b>Value:</b>
-  <%= @property.value %>
-</p>
-
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+<div class="row">
+	<div class="large-6 large-centered column prop_block" style="padding:2px;">
+		<div class="text_block_prop color_<%= (0..13).to_a.sample %>">
+			<h2 class="value" style="padding-top:45px;"><%= prop.k %>: <%= prop.v %></h2>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="large-6 large-centered column prop_block" style="padding:2px;">
+		<div class="text_block_prop color_<%= (0..13).to_a.sample %>">
+			<h2 class="value" style="padding-top:45px;">callback URL: <%= prop_path(prop) %></h2>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="large-6 large-centered column prop_block" style="padding:2px;">
+		<div class="text_block_prop color_<%= (0..13).to_a.sample %>">
+			<h2 class="value" style="padding-top:5px;word-break:break-all;">access Token:<br /><%= SecureRandom.hex %></h2>
+		</div>
+	</div>
+</div>

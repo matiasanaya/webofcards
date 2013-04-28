@@ -7,6 +7,10 @@ class Card < ActiveRecord::Base
   	'Matias Anaya'
   end
 
+  def desc
+    'This is the object representing Matias Anaya. A neat abstraction'
+  end
+
   def is_public?
   	return false if privacy == 'private'
   	return true

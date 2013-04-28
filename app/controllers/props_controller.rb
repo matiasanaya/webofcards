@@ -40,7 +40,7 @@ class PropsController < ApplicationController
   # POST /properties
   # POST /properties.json
   def create
-    @property = Prop.new(params[:property])
+    @property = Prop.new(params[:prop])
 
     respond_to do |format|
       if @property.save

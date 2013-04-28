@@ -2,25 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.color_0 {
-	background-color: #2ECC71;
-}
-
-.color_1 {
-	background-color: #9B59B6;
-}
-
-.color_2 {
-	background-color: #F1C40F;
-}
-
-.color_3 {
-	background-color: #E74C3C;
+#header {
+	padding-bottom: 2%;
 }
 
 .prop_block * {
 	color: white;
-	padding-top: 80%;
+}
+
+.text_block {
+	min-height: 140px;
+	line-height: 60px;
 }
 
 .profile_photo_block {
@@ -28,7 +20,7 @@
 }
 
 .key {
-	text-align: center;
+	margin-left: 10%;
 }
 
 .value {
@@ -39,9 +31,11 @@
 #card {
 	background-color: white;
 	padding: 1px;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-bottom: 7%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 4%;
+	padding-right: 6px;
+	padding-left: 6px;
 	max-width: 815px;
 	box-shadow: 2px 3px 1px #888888;
 }
@@ -90,4 +84,60 @@
 
 .alternate {
 	background-color: white;
+}
+
+.color_0 {
+	background-color: #1ABC9C;
+}
+
+.color_7 {
+	background-color: #16A085;
+}
+
+.color_1 {
+	background-color: #2ECC71;
+}
+
+.color_8 {
+	background-color: #27AE60;
+}
+
+.color_2 {
+	background-color: #3498DB;
+}
+
+.color_9 {
+	background-color: #2980B9;
+}
+
+.color_3 {
+	background-color: #9B59B6;
+}
+
+.color_10 {
+	background-color: #8E44AD;
+}
+
+.color_4 {
+	background-color: #F1C40F;
+}
+
+.color_11 {
+	background-color: #F39C12;
+}
+
+.color_5 {
+	background-color: #E67E22;
+}
+
+.color_12 {
+	background-color: #D35400;
+}
+
+.color_6 {
+	background-color: #E74C3C;
+}
+
+.color_13 {
+	background-color: #C0392B;
 }

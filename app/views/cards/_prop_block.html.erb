@@ -1,8 +1,10 @@
-<div class="large-2 column prop_block color_<%= i%4 %>">
+<% if i%4 == 0 && i != 0 %>
+	</div>
 	<div class="row">
+<% end %>
+<div class="large-3 column prop_block" style="padding:2px;">
+	<a href="<%= url_for prop %>"><div class="text_block color_<%= i%14 %>">
 		<h7 class="key"><%= prop.k %>:</h7>
-	</div>
-	<div class="row">
 		<h5 class="value"><%= prop.v %></h5>
-	</div>
+	</div><a/>
 </div>
