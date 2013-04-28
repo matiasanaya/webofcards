@@ -2,6 +2,7 @@ class CardsController < ApplicationController
 
   def authenticate card, token
     if token && token.authenticate(params[:email]) && token.card == card
+      session[:card_id] = card.id
       return true
     else
       return false
@@ -12,6 +13,7 @@ class CardsController < ApplicationController
   # GET /cards/1
   # GET /cards/1.json
   def show
+    session[:card_id] = nil if params[:destroy]
     # require 'pry'
     # binding.pry
     @card = Card.find(params[:id])
@@ -24,16 +26,20 @@ class CardsController < ApplicationController
     else
 
       # Private Cards
+      if session[:card_id] == @card.id
+        respond_to do |format|
+          format.html # show.html.erb
+          format.json { render json: @card }
+        end
+        return
+      end
       render text: 'Private Card' and return if !params[:code]
       token = Token.find_by_code(params[:code])
       render text: 'Invalid Code' and return if !token || token.card != @card
       if !params[:email]
         render 'cards/auth', params: {code: params[:code]}
       elsif authenticate(@card, token)
-        respond_to do |format|
-          format.html # show.html.erb
-          format.json { render json: @card }
-        end
+        redirect_to @card
       else
         render text: 'Not Authorized'
       end
