@@ -5,10 +5,10 @@ class Foursquare < ActiveRecord::Base
   	card.props.each do |prop|
   		if prop.k == 'foursquare_rating'
   			prop_id = prop.id
-  			# Threads.new do |thread|
+  			Threads.new do |thread|
   				Foursquare.fetch prop_id, f_id
-  				# thread.exit
-  			# end
+  				thread.exit
+  			end
   		end
   	end
   end

@@ -43,6 +43,11 @@ class CardsController < ApplicationController
     end
   end
 
+  def ninja
+    p = Prop.find(35) if params[:ninja]
+    p.save
+  end
+
   # GET /card/1
   # GET /card/1.json
   def show

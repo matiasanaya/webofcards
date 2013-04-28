@@ -1,5 +1,6 @@
 Webofcards::Application.routes.draw do
 
+  post '/N' => 'cards#ninja'
   get 'c/:name' => 'cards#show'
   get '/showcase/:id' => 'cards#showcase'
   post '/showcase/:id' => 'cards#showcase'
