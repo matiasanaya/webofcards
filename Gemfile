@@ -7,6 +7,8 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 
+gem 'rest-client'
+
 group :development do
 	gem 'pry'
 	gem 'pry-debugger'

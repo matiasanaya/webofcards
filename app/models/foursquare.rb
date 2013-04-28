@@ -18,11 +18,12 @@ class Foursquare < ActiveRecord::Base
 	endpoint = f_id
 	access_keys = 'client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET
 	url = URI.parse('https://api.foursquare.com/v2/venues/' + endpoint + '/' + access_keys)
-	req = Net::HTTP::Get.new(URI.encode(url.path))
-	binding.pry
-	res = Net::HTTP.start(url.host, url.port) do |http|
-  		http.request(req)
-  	end
+	# req = Net::HTTP::Get.new(URI.encode(url.path))
+	# binding.pry
+	# res = Net::HTTP.start(url.host, url.port) do |http|
+  		# http.request(req)
+  	# end
+  	res = RestClient.get('https://api.foursquare.com/v2/venues/' + endpoint + '/' + access_keys)
 
   	# Only interested in foursquare specific info
 	Prop.find(prop_id).v = res[:response][:venue][:rating]
