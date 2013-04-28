@@ -2,11 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.color_0 {
+	background-color: #2ECC71;
+}
+
+.color_1 {
+	background-color: #9B59B6;
+}
+
+.color_2 {
+	background-color: #F1C40F;
+}
+
+.color_3 {
+	background-color: #E74C3C;
+}
+
+.prop_block * {
+	color: white;
+}
+
+.key {
+	text-align: center;
+}
+
+.value {
+	text-align: center;
+}
+
+
 #card {
 	background-color: white;
 	padding: 1px;
 	margin-left: 2%;
 	margin-right: 2%;
+	margin-bottom: 7%;
 	max-width: 815px;
 	box-shadow: 2px 3px 1px #888888;
 }
@@ -44,7 +74,7 @@
 }
 
 .prop * {
-	color: #95A5A6;
+	color: #555;
 }
 
 .prop {
