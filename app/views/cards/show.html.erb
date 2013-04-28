@@ -2,6 +2,7 @@
 
 <div id="card">
 	<div class="row">
+		<div class="span9 column" style="padding:0%;"><img src="/profile.jpg"></div>
 		<% @card.props.each_with_index do |prop, i| %>
 			<%= render partial: 'prop_block', locals: {i: i, prop: prop}%>
 		<% end %>
