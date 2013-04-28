@@ -1,5 +1,5 @@
 class Card < ActiveRecord::Base
-  attr_accessible :name, :privacy
+  attr_accessible :name, :privacy, :desc, :typ
 
   has_many :props
 
@@ -7,13 +7,17 @@ class Card < ActiveRecord::Base
   	'Matias Anaya'
   end
 
-  def desc
-    'This is the object representing Matias Anaya. A neat abstraction'
-  end
-
   def is_public?
   	return false if privacy == 'private'
   	return true
+  end
+
+  def update_services
+    props.each do |prop|
+      if prop.k == 'foursquare_id'
+        Foursquare.update Card.find(4), prop.v
+      end
+    end
   end
 
   def to_custom_json

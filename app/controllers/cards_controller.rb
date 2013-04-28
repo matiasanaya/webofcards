@@ -47,6 +47,7 @@ class CardsController < ApplicationController
   # GET /card/1.json
   def show
     @card = Card.find(params[:id])
+    # @card.update_services if @card
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @card.to_custom_json }

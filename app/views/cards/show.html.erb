@@ -2,10 +2,10 @@
 
 <div id="card">
 	<div id="header" class="row">
-		<div class="large-4 column" style="padding:5px;"><img src="/profile.jpg"></div>
+		<div class="large-4 column" style="padding:5px;"><img src="/<%= @card.id %>_profile.jpg"></div>
 		<div class="large-8 column">
 			<h1 style="padding-top:100px;"><%= @card.name %></h1>
-			<h3 class="subheader">type: <i>HumanBeing</i><h3>
+			<h3 class="subheader">type: <i><%= @card.typ %></i><h3>
 			<h5 class="subheader" style="padding-top:10px;"><%= @card.desc %></h5>
 		</div>
 	</div>

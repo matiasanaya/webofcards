@@ -59,7 +59,7 @@ class PropsController < ApplicationController
     @property = Prop.find(params[:id])
 
     respond_to do |format|
-      if @property.update_attributes(params[:property])
+      if @property.update_attributes(params[:prop])
         format.html { redirect_to @property, notice: 'Property was successfully updated.' }
         format.json { head :no_content }
       else

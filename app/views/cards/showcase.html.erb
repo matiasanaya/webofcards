@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div id="card">
+<div id="card_showcase">
 	<%= render partial: 'head'%>
 	<% @card.props.each_with_index do |prop, i| %>
 		<%= render partial: 'username', locals: {i: i, prop: prop}%>
