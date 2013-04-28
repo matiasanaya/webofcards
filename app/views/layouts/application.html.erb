@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color:#ECF0F1">
 <head>
   <title>Webofcards</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="background-color:#ECF0F1">
 
 <% flash.each do |name, msg| %>
 	<%= content_tag :div, msg, :id => "flash#{name}" %>

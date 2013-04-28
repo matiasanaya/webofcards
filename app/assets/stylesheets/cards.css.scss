@@ -1,3 +1,58 @@
 // Place all the styles related to the Cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#card {
+	background-color: white;
+	padding: 1px;
+	margin-left: 2%;
+	margin-right: 2%;
+	max-width: 815px;
+	box-shadow: 2px 3px 1px #888888;
+}
+
+#head h1 {
+	color: white
+}
+
+#head {
+	background-color: #16A085;
+	padding-top: 36.87%;
+	position: relative;
+	overflow: hidden;
+}
+
+#cover_photo {
+	position: absolute;
+	top: 0%;
+}
+
+.hover_row {
+	position: absolute;
+	top: 20%;
+}
+
+#profile_photo {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background-color: white;
+	padding: 3%;
+}
+
+.side_icon {
+	color: #BDC3C7;
+}
+
+.prop * {
+	color: #95A5A6;
+}
+
+.prop {
+	background-color: white;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.alternate {
+	background-color: white;
+}

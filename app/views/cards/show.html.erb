@@ -1,16 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Card:</b>
-  <%= @card.name %>
-</p>
-<% @card.props.each do |prop| %>
-	<p>
-	  <b><%= prop.k %>:</b>
-	  <%= prop.v %>
-	</p>
-<% end %>
-
-
-<%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', cards_path %>
+<div id="card">
+	<%= render partial: 'head'%>
+	<% @card.props.each_with_index do |prop, i| %>
+		<%= render partial: 'username', locals: {i: i, prop: prop}%>
+	<% end %>
+</div>
