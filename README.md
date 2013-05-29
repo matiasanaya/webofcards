@@ -12,3 +12,5 @@ Motivation
 ----------
 
 This project is part of a open data movement, which aims at providing a reliable crowdsourced approach into organizing the world's data.
+
+Video pitch: http://techcrunch.com/events/disrupt-ny-hackathon-2013/video-clips/ @54
